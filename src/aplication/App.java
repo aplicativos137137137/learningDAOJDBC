@@ -4,6 +4,8 @@ import java.util.Date;
 
 import model.entities.Department;
 import model.entities.Seller;
+import model.DAO.SellerDAO;
+import model.DAO.DAOFactory;
 
 public class App {
 
@@ -14,5 +16,7 @@ public class App {
 
         Seller seller = new Seller(10, "trem", "trem@gmail.com", new Date(), 3000.00, obj);
         System.out.print(seller);
+
+        SellerDAO sellerDAO = DAOFactory.createSellerDAO();
     }
 }
