@@ -27,7 +27,12 @@ public class App {
 
         List<Seller> list = sellerDAO.findByDepartment(department);
         for(Seller sellerFound : list) {
-            System.out.print(sellerFound);
+            System.out.println(sellerFound);
+        }
+
+        List<Seller> listFindAll = sellerDAO.findAll();
+        for(Seller sellerFindAll : listFindAll) {
+            System.out.print(seller);
         }
     }
 }
