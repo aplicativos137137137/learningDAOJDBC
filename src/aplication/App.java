@@ -32,7 +32,11 @@ public class App {
 
         List<Seller> listFindAll = sellerDAO.findAll();
         for(Seller sellerFindAll : listFindAll) {
-            System.out.print(seller);
+            System.out.println(seller);
         }
+
+        Seller sellerTestandoOInsert = new Seller(null, "tremtestandooinsert", "tremtestandooinsert@gmail.com", new Date(), 3000.0, department);
+        sellerDAO.insert(sellerTestandoOInsert);
+        System.out.print("Inserted, new ID = " + sellerTestandoOInsert.getId());
     }
 }
