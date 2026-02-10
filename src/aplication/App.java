@@ -37,6 +37,12 @@ public class App {
 
         Seller sellerTestandoOInsert = new Seller(null, "tremtestandooinsert", "tremtestandooinsert@gmail.com", new Date(), 3000.0, department);
         sellerDAO.insert(sellerTestandoOInsert);
-        System.out.print("Inserted, new ID = " + sellerTestandoOInsert.getId());
+        System.out.println("Inserted, new ID = " + sellerTestandoOInsert.getId());
+
+        Seller SellerTestandoOUpdate = sellerDAO.findById(1);
+        SellerTestandoOUpdate.setBaseSalary(1500.00);
+        sellerDAO.update(SellerTestandoOUpdate);
+        System.out.print("update completed");
+
     }
 }
